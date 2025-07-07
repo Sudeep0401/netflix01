@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX CLONE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='netflix.css') }}">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div>
+                <img width="150" src="{{ url_for('static', filename='logo.svg') }}" alt="Netflix Logo">
+            </div>
+            <div>
+                {% if session['user'] %}
+                    <span class="welcome">Welcome, {{ session['user'] }}!</span>
+                    <a href="{{ url_for('logout') }}"><button class="btn btn-red">Logout</button></a>
+                {% else %}
+                    <a href="{{ url_for('register') }}"><button class="btn">Register</button></a>
+                    <a href="{{ url_for('login') }}"><button class="btn btn-red">Sign In</button></a>
+                {% endif %}
+            </div>
+        </nav>
+        <div class="box"></div>
+        <div class="hero">
+            <span>Enjoy big movies, hit series and more from ₹ 149.</span>
+            <span>Join today. Cancel anytime.</span>
+            <span>Ready to watch? Enter your email to create or restart your membership.</span>
+            <div class="hero-buttons">
+                <input type="text" placeholder="Email address">
+                <button class="btn btn-red-red">Get started &gt;</button>
+            </div>
+        </div>
+        <div class="seperation"></div>
+    </div>
+
+    <section class="first">
+        <div>
+            <span>Enjoy on your TV</span>
+            <span>Watch on smart TVs, PlayStation, Xbox, ChromeCast, Apple TV, Blu-ray Players and more.</span>
+        </div>
+        <div class="secimg">
+            <img src="{{ url_for('static', filename='netflix02.png') }}" alt="">
+            <video src="{{ url_for('static', filename='videos/video-tv-in-0819.m4v') }}" autoplay loop muted></video>
+        </div>
+    </section>
+    <div class="seperation"></div>
+    
+    <section class="first second">
+        <div class="secimg">
+            <img src="{{ url_for('static', filename='netflix03.jpg') }}" alt="">
+        </div>
+        <div>
+            <span>Download your shows to watch offline</span>
+            <span>Save your favorites easily and always have something to watch.</span>
+        </div>
+    </section>
+    <div class="seperation"></div>
+
+    <section class="first third">
+        <div>
+            <span>Watch everywhere</span>
+            <span>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</span>
+        </div>
+        <div class="secimg">
+            <img src="{{ url_for('static', filename='netflix02.png') }}" alt="">
+            <video src="{{ url_for('static', filename='videos/video-devices-in.m4v') }}" autoplay loop muted></video>
+        </div>
+    </section>
+    <div class="seperation"></div>
+
+    <section class="first fourth">
+        <div class="secimg">
+            <img src="{{ url_for('static', filename='netflix05.png') }}" alt="">
+        </div>
+        <div>
+            <span>Create profiles for kids</span>
+            <span>Send children on adventures with their favorite characters in a space made just for them - free with your membership.</span>
+        </div>
+    </section>
+    <div class="seperation"></div>
+
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="box">
+            ❤️ Created by Sudeep Kumar Masam
+        </div>
+    </section>
+</body>
+</html>

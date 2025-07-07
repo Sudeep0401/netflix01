@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <nav>
+        <div>
+            <img width="150" src="{{ url_for('static', filename='logo.svg') }}" alt="Netflix Logo">
+        </div>
+        <div>
+            <span class="welcome">Welcome, {{ user }}!</span>
+            <a href="{{ url_for('logout') }}"><button class="btn btn-red">Logout</button></a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <h1>Welcome to Netflix!</h1>
+        <p>Enjoy your favorite movies and shows.</p>
+        <div class="movie-grid">
+            <div class="movie">
+                <img src="{{ url_for('static', filename='movie1.jpeg') }}" alt="Movie 1">
+                <p>Movie Title 1</p>
+            </div>
+            <div class="movie">
+                <img src="{{ url_for('static', filename='movie2.jpeg') }}" alt="Movie 2">
+                <p>Movie Title 2</p>
+            </div>
+            <div class="movie">
+                <img src="{{ url_for('static', filename='movie3.jpeg') }}" alt="Movie 3">
+                <p>Movie Title 3</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

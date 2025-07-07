@@ -1,0 +1,251 @@
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Background */
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Main Hero Section */
+.main {
+    background: url(images/netflix01.jpg) center/cover no-repeat;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dark Overlay */
+.main .box {
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    position: absolute;
+    top: 20px;
+    z-index: 10;
+}
+
+nav img {
+    width: 160px;
+}
+
+nav div {
+    display: flex;
+    gap: 10px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    z-index: 10;
+    padding: 20px;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.hero h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Hero Input & Button */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.hero-buttons input {
+    padding: 12px;
+    width: 300px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.hero-buttons input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-red {
+    background: red;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-red:hover {
+    background: darkred;
+}
+
+/* Section Styling */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10%;
+    text-align: left;
+    gap: 50px;
+}
+
+section div {
+    max-width: 500px;
+}
+
+section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+section p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+section img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.secimg {
+    position: relative;
+}
+
+.secimg video {
+    position: absolute;
+    width: 80%;
+    top: 20%;
+    left: 10%;
+}
+
+/* Separation Line */
+.seperation {
+    height: 5px;
+    background: rgb(35, 35, 35);
+}
+
+/* FAQ Section */
+.faq {
+    text-align: center;
+    padding: 50px;
+}
+
+.faq h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.faq-box {
+    width: 60%;
+    margin: auto;
+}
+
+.faq-item {
+    background: #303030;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    padding: 15px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background: #424242;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        width: 90%;
+    }
+
+    .hero {
+        max-width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons input {
+        width: 90%;
+    }
+
+    section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .secimg video {
+        width: 70%;
+        top: 15%;
+        left: 15%;
+    }
+
+    .faq-box {
+        width: 90%;
+    }
+}
